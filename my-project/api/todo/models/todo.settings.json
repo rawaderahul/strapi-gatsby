@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "todos",
+  "info": {
+    "name": "todo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "created": {
+      "type": "date"
+    },
+    "done": {
+      "type": "boolean"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "gallery_images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "single_image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
